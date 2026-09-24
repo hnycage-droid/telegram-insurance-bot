@@ -68,7 +68,7 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == '__main__':
     # استبدل TOKEN بالرمز الخاص ببوتك من BotFather
-    app = ApplicationBuilder().token("YOUR_TELEGRAM_BOT_TOKEN").build()
+    app = ApplicationBuilder().token("8374116423:AAE6nigRM1ispBRkccYY0HyfNlaKsSc1luQ").build()
     
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_click))
@@ -89,7 +89,7 @@ from telegram.ext import (
 NAME, POLICY_NUM, INCIDENT_DESC, PHOTO = range(4)
 
 # ضع هنا معرف Chat ID الخاص بك أو بمجموعة موظفي التأمين لتلقي البلاغات
-ADMIN_CHAT_ID = "YOUR_ADMIN_CHAT_ID"
+ADMIN_CHAT_ID = "@Hgeca"
 
 # 1. بدء استقبال البلاغ
 async def start_claim(update: Update, context: ContextTypes.DEFAULT_TYPE):
