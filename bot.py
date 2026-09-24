@@ -68,7 +68,7 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == '__main__':
     # استبدل TOKEN بالرمز الخاص ببوتك من BotFather
-    app = ApplicationBuilder().token("8374116423:AAE6nigRM1ispBRkccYY0HyfNlaKsSc1luQ").build()
+    app = ApplicationBuilder().token("8871716550:AAEzAdvXcyLwT0W0N2z6fH1ve-d6VDzfwJ4").build()
     
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(button_click))
@@ -173,6 +173,6 @@ claim_handler = ConversationHandler(
 )
 
 if __name__ == '__main__':
-    app = ApplicationBuilder().token("8374116423:AAE6nigRM1ispBRkccYY0HyfNlaKsSc1luQ").build()
+    app = ApplicationBuilder().token("8871716550:AAEzAdvXcyLwT0W0N2z6fH1ve-d6VDzfwJ4").build()
     app.add_handler(claim_handler)
     app.run_polling()
