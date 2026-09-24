@@ -1,11 +1,3 @@
-from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
-if __name__ == '__main__':
-    # استبدل TOKEN بالرمز الذي حصلت عليه من BotFather
-    app = ApplicationBuilder().token("8871716550:AAEzAdvXcyLwT0W0N2z6fH1ve-d6VDzfwJ4").build()
-    app.add_handler(CommandHandler("start", start))
-    app.run_polling()
-
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import ApplicationBuilder, CallbackQueryHandler, CommandHandler, ContextTypes
 
