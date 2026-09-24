@@ -6,13 +6,16 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [InlineKeyboardButton("🚗 تأمين السيارات", callback_data='auto')],
         [InlineKeyboardButton("🏠 تأمين الحريق والممتلكات", callback_data='fire')],
-        [InlineKeyboardButton("📦 تأمين الشحن السريع", callback_data='shipping')],
+        [InlineKeyboardButton("📦 تأمين النقل البري و البحري ", callback_data='shipping')],
+        [InlineKeyboardButton("📦 تأمين الحياة ", callback_data='life')],
+        [InlineKeyboardButton("📦 التأمين الصحي ", callback_data='health')],
+        [InlineKeyboardButton("📦 الملف التعريفي بالشركة ", callback_data='prof')],
         [InlineKeyboardButton("📞 التواصل معنا", callback_data='contact')]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     
     text = (
-        "مرحباً بك في شركة التأمين! 🛡️\n"
+        "مرحباً بك في الشركة الاسلامية السورية للتأمين! 🛡️\n"
         "يسرنا تقديم حلول تأمينية متكاملة لحمايتك وحماية أعمالك.\n"
         "اختر أحد الخيارات التالية للاطلاع على التفاصيل:"
     )
@@ -31,7 +34,7 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     if query.data == 'auto':
         msg = (
-            "🚗 *خدمة تأمين السيارات*\n\n"
+            "🚗 *تأمين السيارات*\n\n"
             "• تغطية الشامل وضد الغير بأفضل الأسعار.\n"
             "• إصلاح داخل الوكالة أو الورش المعتمدة.\n"
             "• خدمة المساعدة على الطريق وتوفير سيارة بديلة."
@@ -39,22 +42,43 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif query.data == 'fire':
         msg = (
             "🏠 *تأمين الحريق والممتلكات*\n\n"
-            "• حماية كاملة للمنشآت والمنازل ضد أخطار الحريق والتلف.\n"
-            "• تغطية أضرار السطو، التماس الكهربائي، والانفجارات."
+            "• حماية كاملة للمنشآت التجارية و الصناعية والمنازل ضد أخطار الحريق والتلف.\n"
+            "• تغطية السرقة والتماس الكهربائي، والانفجار."
+            "• تغطية اخطار الطبيعة."
+        )
+    elif query.data == 'life':
+        msg = (
+            "🏠 *تأمين الأفراد والمجموعات*\n\n"
+            "• في حالة الوفاة لأي سبب.\n"
+            "• العجز الكلي و الجزئي."
+            "• تغطية اخطار الطبيعة."
+        )
+    elif query.data == 'health':
+        msg = (
+            "🏠 *تأمين الأفراد والمجموعات*\n\n"
+            "• داخل المشفى للعمليات الباردة و الاسعافية.\n"
+            "• خارج المشفى زيارة الطبيب."
+            "• التصوير الشعاعي والمخابر والادوية."
         )
     elif query.data == 'shipping':
         msg = (
-            "📦 *تأمين الشحن السريع (Express Shipping)*\n\n"
-            "• حماية الشحنات والبضائع أثناء النقل البري، البحري، والجوّي.\n"
+            "📦 *تأمين البضائع (Express Shipping)*\n\n"
+            "• وحماية الشحنات والبضائع أثناء النقل البري، البحري، والجوّي.\n"
             "• تعويض سريع في حالات الفقدان، التلف، أو الحوادث الطارئة."
+        )
+    elif query.data == 'prof':
+        msg = (
+            "📦 *اضغط على الرابط (Express Shipping)*\n\n"
+            "• للاطلاع على الملف التعريفي للشركة.\n"
+            "• https://siic-insurance.com/SIICProfilev1.pdf"
         )
     elif query.data == 'contact':
         msg = (
             "📞 *معلومات التواصل والدعم الفني*\n\n"
-            "• 📱 *المركز الرئيسي:* 00963110000000\n"
-            "• ✉️ *البريد الإلكتروني:* info@insurance-company.com\n"
-            "• 💬 *المحادثة المباشرة:* @InsuranceSupport\n"
-            "• 🌐 *الموقع الإلكتروني:* www.insurance-company.com"
+            "• 📱 *المركز الرئيسي:* 00963119795\n"
+            "• ✉️ *البريد الإلكتروني:* info@siic-insurance.com\n"
+            "• 💬 *المحادثة المباشرة:* @hgeca\n"
+            "• 🌐 *الموقع الإلكتروني:* www.siic-insurance.com"
         )
     elif query.data == 'main_menu':
         await start(update, context)
