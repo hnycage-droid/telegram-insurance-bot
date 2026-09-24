@@ -68,7 +68,7 @@ async def button_click(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
     elif query.data == 'prof':
         msg = (
-            "📦 *اضغط على الرابط (Express Shipping)*\n\n"
+            "📦 *اضغط على الرابط *\n\n"
             "• للاطلاع على الملف التعريفي للشركة.\n"
             "• https://siic-insurance.com/SIICProfilev1.pdf"
         )
