@@ -173,6 +173,6 @@ claim_handler = ConversationHandler(
 )
 
 if __name__ == '__main__':
-    app = ApplicationBuilder().token("YOUR_TELEGRAM_BOT_TOKEN").build()
+    app = ApplicationBuilder().token("8374116423:AAE6nigRM1ispBRkccYY0HyfNlaKsSc1luQ").build()
     app.add_handler(claim_handler)
     app.run_polling()
